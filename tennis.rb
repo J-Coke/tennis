@@ -1,20 +1,4 @@
 
-# player1 = scores[1]
-
-def score(point_winnner)
-    scores = ['0', '15', '30', '40', 'adv']
-
-    current_score = {
-        player1: 0,
-        player2: 0
-    }
-
-    current_score[point_winnner] += 1
-
-    if current_score[:player1] && current_score[:player2] < 4
-
-    return "#{scores[current_score[:player1]]}-#{scores[current_score[:player2]]}"
-end
 
 class Set
     # attr_reader :player1
@@ -32,6 +16,15 @@ class Set
 
     def method1
     end
-end
 
-set1 = Set.new
+    def play_a_game
+        while no winner
+            self.point(random_player)
+        end
+        return score
+    end
+
+    def point(player)
+        player += 1
+    end
+end
